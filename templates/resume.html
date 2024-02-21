@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <button type="submit">submit</button>
+    </form>
+    <a href="{{url_for('admin')}}">admin</a>
+    
+    {% for obj in resume | reverse%}
+    {% if 2>loop.index %}
+    <p>{{obj.filename}} "active"id: {{obj.id}}</p>
+    <a href="/download/resume/{{obj.id}}">download</a>
+    <a href="/delete/resume/{{obj.id}}">delete</a>
+    {% endif %}
+    {% endfor %}
+    
+    {% for obj in resume | reverse%}
+    {% if loop.index>2 %}
+    <p>{{obj.filename}} "deactive "id:{{obj.id}}</p>
+    <a href="/download/resume/{{obj.id}}">download</a>
+    <a href="/delete/resume/{{obj.id}}">delete</a>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>

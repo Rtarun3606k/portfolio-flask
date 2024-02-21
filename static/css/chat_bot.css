@@ -1,0 +1,100 @@
+.chat_parent{
+    margin: 5% 12%;
+}
+
+.user, .user2, .user3{
+    padding: 3% 3%;
+    border-radius: 15px;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4 4 4 / 33%);
+
+}
+.user_img_show{
+    width: 8rem;
+    height: 7rem;
+}
+
+.user_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    width: 25%;
+}
+
+.user2{
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.query_collector{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.user3{
+    flex-direction: row-reverse;
+    position: sticky;
+    margin-top: 6%;
+    margin-bottom: -5%;
+}
+
+.form-control{
+    line-height: 0.8;
+}
+
+.trigger{
+    font-size: 18px;
+    padding: 0.5%;
+    border-radius: 11px;
+}
+
+
+
+.bottom{
+    display: flex;
+    /* gap: 3rem; */
+    /* gap: 41rem; */
+    margin-top: -2%;
+    margin-bottom: -3%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+.sub-user{
+    display: flex;
+    gap: 3rem;
+    justify-content: normal;
+    align-items: center;
+    /* flex-direction: column-reverse; */
+    width: 100%;
+    /* flex-direction: column-reverse; */
+}
+
+.query_made{
+    display: flex;
+    gap: 3rem;
+    justify-content: normal;
+    align-items: center;
+    /* flex-direction: column-reverse; */
+    width: 100%;
+}
+
+.sizes{
+    width: 82%;
+    height: 90%;
+    margin-right: -9%;
+}

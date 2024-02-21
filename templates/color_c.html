@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+    
+    <style>
+        {% for object in colors %}
+        {% if loop.index >0  %}
+        
+        
+        body{
+            background: {{object.body_color}};
+
+            color:{{object.about_font_color}};
+        }
+        {% endif %}
+      
+        {% endfor %}
+        
+        </style>
+    <form action="" method="POST">
+        <input type="color" name="body_color">
+        <input type="color" name="contact_bg">
+        <input type="color" name="about_font_color">
+        <input type="color" name="adout_bg_color">
+        <input type="color" name="certi_font_color">
+        <input type="color" name="certi_color">
+        <input type="color" name="project_card_font_color">
+        <input type="color" name="project_card_button_color">
+        <input type="color" name="project_card_color">
+        <input type="color" name="card_color_bg">
+        <input type="text" name="certi_font">
+        <input type="text" name="project_card_font">
+        <input type="text" name="font_style">
+        <input type="text" name="font">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    {% for object in colors %}
+    {% if loop.index >0  %}
+    <p>{{object.body_color}}  {{object.id}} </p><span><a href="/delete/color_c_del/{{object.id}}">delet</a></span><span> <input type="color" name="body_color" value="{{object.body_color}}"></span><span><a href="/color_c_upd/{{object.id}}">update</a></span>
+    {% endif %}
+    {% endfor %}
+    {% endblock %}

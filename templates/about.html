@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+
+
+
+{% block body%}
+
+<div>
+
+    <div class="div hidden">
+        <div>
+            <div>
+                {% for selfs in allinfo %}
+
+                <img src="/self/{{selfs.id}}" alt="" class="imgi ">
+                {% endfor %}
+                <!-- <img src="/self/{{self.id}}" alt="" class="hidden"> -->
+            </div>
+            <h1 class="hello ">HELLO</h1>
+        </div>
+
+        <div>
+            {% for p in pahara %}
+
+            <p class=" hidden">{{p.first_para}}</p>
+            {% endfor %}
+        </div>
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}
